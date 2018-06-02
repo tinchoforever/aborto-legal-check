@@ -17,6 +17,20 @@ angular.module('initApp')
       $scope.onAnswer = false;
       $scope.showResume = true;
     }
+    $scope.startGame = function(){
+      $scope.currentGame.questions = shuffle($scope.readyToCheck).slice(0,5);
+      $scope.onQuestion = true;
+      $scope.onAnswer = false;
+      $scope.showResume = false;
+      $scope.currentCheck = $scope.currentGame.questions[$scope.currentGame.remaing-1];
+      $scope.currentGame = {
+        points:0,
+        remaing: 5,
+      }
+      $scope.lastAnswer = {
+        result : false,
+      }
+    }
     $scope.nextQuestion = function(){
       $scope.onQuestion = true;
       $scope.onAnswer = false;
@@ -26,6 +40,8 @@ angular.module('initApp')
 
     $scope.responder = function(c){
       var res = $scope.currentCheck['Resultado chequeo'];
+
+      $scope.currentCheck.tuRespuesta = c;
       $scope.lastAnswer.answer = c;
       $scope.lastAnswer.result = c ===res;
       if ($scope.lastAnswer.result){
@@ -42,13 +58,13 @@ angular.module('initApp')
   	d3.csv(url, function(data){
       $scope.$apply(function(){
         $scope.checks = data;
-        var readyToCheck = [];
+        $scope.readyToCheck = [];
         data.map(function(d){
           if (d['Resultado chequeo'] != ''){
-            readyToCheck.push(d);
+            $scope.readyToCheck.push(d);
           }
         });
-        $scope.currentGame.questions = shuffle(readyToCheck).slice(0,5);
+        
        
       });
     });
