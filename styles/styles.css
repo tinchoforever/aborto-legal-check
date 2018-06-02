@@ -1,0 +1,264 @@
+* {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color:#69c048;
+}
+
+body {
+   background: #DDD;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    /*background: white;*/
+}
+
+.container {
+    /* background: white; */
+}
+
+.has-margin-top {
+    margin-top: 3rem;
+}
+
+.btn {
+    font-size: 1.25rem;
+    border-color: transparent;
+    white-space: normal;
+}
+
+.btn-primary {
+    background-color: #6bc049;
+}
+
+.logo {
+    padding-left: 2rem;
+}
+
+.video {
+    margin-top: 4rem;
+}
+
+.set h3 {
+    font-size: 1.2rem;
+    padding: 2rem 0rem 1rem 1rem;
+}
+
+.set p {
+    padding-left: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-top: 0.75rem;
+}
+
+.set a {
+    color: #6cbf48;
+    padding: 1rem;
+    text-decoration: underline;
+}
+
+.whatis {
+    background: #82c35b;
+    color: white;
+    margin-top: 3rem;
+}
+
+.whatis h3 {
+    padding-left: 2.5rem;
+    font-size: 2.3rem;
+    padding-top: 4.5rem;
+}
+
+.whatis h4 {
+    padding-top: 4rem;
+    padding-left: 2rem;
+    padding-right: 7rem;
+    font-weight: bold;
+}
+
+.whatis img {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.whatis .text {
+    padding-top: 3rem;
+}
+
+.whatis .text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.why {
+    padding-bottom: 6rem;
+}
+
+.why h3 {
+    padding-left: 2rem;
+    font-size: 2.3rem;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.why ul {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #82c35b;
+    margin-left: 1rem;
+}
+
+.why li {
+    margin-bottom: 1.5rem;
+}
+
+.why .btn {
+    margin-top: 4rem;
+    margin-left: 3rem;
+}
+
+.why .text {
+    margin-top: 5rem;
+}
+
+.law {
+    background: #82c35b;
+    color: white;
+    padding-bottom: 3rem;
+}
+
+.law h3 {
+    padding-top: 4rem;
+    font-size: 2.25rem;
+    padding-left: 2rem;
+}
+
+.law h4 {
+    padding-top: 4rem;
+    padding-left: 2rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.7;
+}
+
+.law ul {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.law li {
+    margin-bottom: 1rem;
+}
+
+.law .text {
+    padding-top: 4rem;
+}
+
+.law .text a {
+    color: white;
+    text-decoration: underline;
+}
+
+.law .text span {
+    display: inline-block;
+    background: white;
+    color: #82c35b;
+    margin-right: 1rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    padding-top: 0.25rem;
+}
+
+.process {
+    padding-bottom: 3rem;
+}
+
+.process h3 {
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    padding-bottom: 3rem;
+}
+
+.process h4 {
+    color: #82c35b;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-left: 2rem;
+    line-height: 1.5;
+}
+
+.process .text {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #82c35b;
+    margin-bottom: 2rem;
+}
+
+.process h6 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    background: black;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: white;
+}
+
+footer .ongs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .ong {
+    flex: 1;
+}
+
+footer .ong a {
+    display: block;
+}
+
+footer p {
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .set p {
+        min-height: 7.5rem;
+    }
+
+    .set h3 {
+        min-height: 7rem;
+    }
+
+    .why .text {
+        margin-top: 15rem;
+    }
+
+    .whatis img {
+        margin-left: 1rem;
+    }
+
+    .law h4 {
+        padding-right: 10rem;
+    }
+
+    .process h4 {
+        padding-right: 7rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1472px;
+    }
+}
