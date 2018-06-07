@@ -2,6 +2,9 @@
     font-family: 'Poppins', Arial, sans-serif;
     color: white;
 }
+html{
+    background: rgb(251, 52, 73);
+}
 .vh80 {
     height: 70vh;
 }
@@ -48,10 +51,27 @@ a{
     justify-content: center;
     text-align: center;
 }
+.second-row{
+    display: flex;
+    padding-top: 2em;
+    align-items: baseline;
+}
 .has-margin-top {
     margin-top: 3rem;
 }
-
+ul li a {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width : 200px;
+   overflow:hidden;
+   display:inline-block;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+h4{
+    font-size: 1.3rem;
+}
 .btn{
     font-size: 1.25rem;
     border-color: transparent;
@@ -59,8 +79,10 @@ a{
     text-transform: uppercase;
     font-weight: 700;
     background-color:#683064;
+    margin: 4px;
+    width: 100%;
 }
-.btn img{
+.btn img, img.icon{
     width: 50px;
 }
 .btn.high{
