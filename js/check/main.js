@@ -18,15 +18,17 @@ angular.module('initApp')
       $scope.showResume = true;
     }
     $scope.startGame = function(){
-      $scope.currentGame.questions = shuffle($scope.readyToCheck).slice(0,5);
+      
       $scope.onQuestion = true;
       $scope.onAnswer = false;
       $scope.showResume = false;
-      $scope.currentCheck = $scope.currentGame.questions[$scope.currentGame.remaing-1];
       $scope.currentGame = {
         points:0,
         remaing: 5,
+        questions: shuffle($scope.readyToCheck).slice(0,5)
       }
+      $scope.currentCheck = $scope.currentGame.questions[$scope.currentGame.remaing-1];
+    
       $scope.lastAnswer = {
         result : false,
       }

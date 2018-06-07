@@ -1,34 +1,63 @@
 * {
-    font-family: 'Montserrat', Arial, sans-serif;
-    color:#69c048;
-}
-
-body {
-   /*background: #DDD;*/
+    font-family: 'Poppins', Arial, sans-serif;
+    color: white;
 }
 .vh80 {
     height: 70vh;
 }
+a{
+    color:white;
+}
+
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    background: white;
+    background: rgb(251, 52, 73);
+    height: 100vh;
 }
+
+
 
 .container {
-    /* background: white; */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
 }
-
+.first-row{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
 .has-margin-top {
     margin-top: 3rem;
 }
 
-.btn {
-    font-size: 1.25rem;
+.btn{
+    font-size: 2.25rem;
     border-color: transparent;
     white-space: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color:#683064;
 }
-
 .btn-primary {
     background-color: #6bc049;
 }
