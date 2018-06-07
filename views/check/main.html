@@ -3,47 +3,46 @@
                 
                 <div class="col-md-12" >
                     <h2> Lo que se dijo en el debate por el #AbortoLegal</h2>
-                    <h5 class="btn"> ¿Verdadero o Falso ?</h5>
+                    <h5 class="btn high"> ¿Verdadero o Falso ?</h5>
                     <h2>  <a href="" ng-click="startGame()" > Responde </a> </h2>
                 </div>
             </div>
-            <div class="row"  ng-show="onQuestion" >
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-8" >
-                      <h1> Aborto Legal y Grauito </h1>
-                    <h2> <strong> Tenemos {{checks.length}} chequeos </strong> </h2>
-                </div>
-            </div>
-			
-            <div class="row" ng-show="onQuestion" >
-            	<div class="col-md-2">
-            	</div>
-                <div class="col-md-8">
-                    <h4> {{currentCheck.Dato}} </h4>
+            <div class=" row first-row"  ng-show="onQuestion">
+              <div class="col-xs-12">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-12">
+                    <h4> "{{currentCheck.Dato}}" </h4>
                     <h6> <strong> {{currentCheck['Expositor/a']}}  </strong> <small> está {{currentCheck['Posición']}} de la Ley de Aborto Legal y Gratuito</small>  </h6>
-                </div>
-            </div>
-            <div class="row"    ng-show="onQuestion" >
-                    	<div class="col-md-2"></div>
-                    		<div class="col-md-3">
-                    			<a href="" ng-click="responder('Veradero')">Verdadero</a>
-                    		</div>
-                    		<div class="col-md-3">
-                    			<a href="" ng-click="responder('Falso')">Falso</a>
-                    		</div>
-                            <div class="col-md-4">
+              
+                <div class="row">
+                  <div class="col-md-2"></div>
+                   <div class="col-md-10">
+                    <div class="row">
+                       <div class="col-xs-3">
+                          <a class="btn" href="" ng-click="responder('Veradero')">Verdadero</a>
                         </div>
-                            <div class="col-md-2">
-                            </div>
-                        
-                    		<div class="col-md-3">
-                    		  <a href="" ng-click="responder('No chequeable')">Inchequeable</a>
-                    		</div>
-                    		<div class="col-md-3">
-                    			<a href="" ng-click="responder('Dudoso')">Dudoso</a>
-                    		</div>
+                        <div class="col-xs-3">
+                          <a class="btn" href="" ng-click="responder('Falso')">Falso</a>
+                        </div>
+                      
+  
+                        <div class="col-md-3">
+                          <a class="btn"  href="" ng-click="responder('No chequeable')">Inchequeable</a>
+                        </div>
+                        <div class="col-md-3">
+                          <a class="btn" href="" ng-click="responder('Dudoso')">Dudoso</a>
+                        </div>
+
+                       </div>
+                     </div>s
+                   </div>
+                </div>
+                      
+            
             </div>
+          </div>
+        </div>
         <div  ng-show="onAnswer">
         <div class="row">
             <div class="col-md-2"></div>

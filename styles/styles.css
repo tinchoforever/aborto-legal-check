@@ -51,12 +51,15 @@ a{
 }
 
 .btn{
-    font-size: 2.25rem;
+    font-size: 1.25rem;
     border-color: transparent;
     white-space: normal;
     text-transform: uppercase;
     font-weight: 700;
     background-color:#683064;
+}
+.btn.high{
+    font-size: 2.25rem;
 }
 .btn-primary {
     background-color: #6bc049;
