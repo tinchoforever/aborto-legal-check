@@ -20,6 +20,8 @@ angular.module('initApp')
     }
     $rootScope.startGame = function(){
       
+      $rootScope.gameFinish = false;
+      
       $rootScope.currentGame = {
         points:0,
         remaing: 5,
@@ -31,6 +33,8 @@ angular.module('initApp')
         result : false,
       }
       $location.path('pregunta');
+
+      
     }
     $rootScope.nextQuestion = function(){
       $rootScope.onQuestion = true;
