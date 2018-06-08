@@ -14,10 +14,10 @@
               <p> "{{currentCheck.Dato}}" </p>
              
               <strong class="btn" ng-show="currentCheck.Comentarios != ''"> ¿Por qué? </strong>
-              <p  ng-show="currentCheck.Comentarios != ''"> {{currentCheck.Comentarios}}</p>
+              <p  class="wow slideInRight" data-wow-delay="2.2s" ng-show="currentCheck.Comentarios != ''"> {{currentCheck.Comentarios}}</p>
             <div class="small">
-                  <strong class="btn"  ng-show="currentCheck['Fuente 1'] != ''"> Fuentes </strong>
-                  <ul>
+                  <strong class="btn wow slideInRight" data-wow-delay="4s"  ng-show="currentCheck['Fuente 1'] != ''"> Fuentes </strong>
+                  <ul class="wow slideInRight" data-wow-delay="4.3s">
                       <li ng-show="currentCheck['Fuente 1'] != ''" ><a target="_blank" ng-href="{{currentCheck['Fuente 1']}}"> {{currentCheck['Fuente 1']}} </a> </li>
                       <li ng-show="currentCheck['Fuente 2'] != ''"><a  target="_blank" ng-href="{{currentCheck['Fuente 2']}}"> {{currentCheck['Fuente 2']}} </a> </li>
                       <li ng-show="currentCheck['Fuente 3'] != ''" ><a target="_blank" ng-href="{{currentCheck['Fuente 3']}}"> {{currentCheck['Fuente 3']}} </a> </li>
