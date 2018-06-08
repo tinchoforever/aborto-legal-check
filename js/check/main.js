@@ -54,10 +54,9 @@ angular.module('initApp')
      
       $rootScope.currentGame.remaing--;
        if ($rootScope.currentGame.remaing == 0){
-        $location.path('fin');
-      }else {
-       $location.path('respuesta');
+          $$rootScope.gameFinish = true;
       }
+      $location.path('respuesta');
 
     }
   	d3.csv(url, function(data){
