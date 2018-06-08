@@ -45,7 +45,7 @@ angular.module('initApp')
 
       $rootScope.currentCheck.tuRespuesta = c;
       $rootScope.lastAnswer.answer = c;
-      $rootScope.lastAnswer.result = c ===res;
+      $rootScope.lastAnswer.result = c.toLowerCase().trim() ===res.toLowerCase().trim();
       if ($rootScope.lastAnswer.result){
         $rootScope.currentGame.points++;
       }
