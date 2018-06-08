@@ -3,25 +3,27 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-            <h1> Tu puntaje fue {{currentGame.points}}! </h1>
-              <h5> <a href="" ng-click="startGame()"> Empeza de nuevo</a></h5>
+            <h1> <img class="icon" src="images/iconos/carita-pan.svg"> Tu puntaje fue {{currentGame.points}}! </h1>
+              <h5> <a href="" class="btn" ng-click="startGame()"> Empeza de nuevo</a></h5>
               <hr/>
                <div class="row">
               <!-- Large modal -->
                 <button type="button" class="btn"  data-toggle="modal" data-target=".bs-example-modal-lg"> ¿Quienes trabajamos en esto?</button>    
                 </div>
-              <h2> <strong> Resumen de tu Juego </strong> </h2>
+              <h2 class="btn"> <strong> Resumen de tu Juego </strong> </h2>
 
             <div ng-repeat="q in currentGame.questions">
                 <hr/>
-                <h2>{{q['Resultado chequeo']}} <small>Respondiente {{q.tuRespuesta}}</small></h2>
+              <h6> <strong> {{q['Expositor/a']}}</strong> dijo que:</h6>
+              <p> "{{q.Dato}}"</p>
+              
+              <h2 class="btn"> <img ng-src="images/iconos/{{q['Resultado chequeo']}}.svg"/>{{q['Resultado chequeo']}} </h2> 
+                <h2> <small>Respondiente <strong> {{q.tuRespuesta}} </strong></small></h2>
 
-              <p> {{q.Dato}}</p>
-              <h6> <strong> {{q['Expositor/a']}}</strong> <small> está {{q['Posición']}} de la Ley de Aborto Legal y Gratuito</small>    </h6>
-              <strong ng-show="q.Comentarios != ''"> ¿Por qué? </strong>
+              <h3> <strong class="btn" ng-show="q.Comentarios != ''"> ¿Por qué? </strong></h3>
               <p  ng-show="q.Comentarios != ''"> {{q.Comentarios}}</p>
             <div class="small">
-                  <strong> Fuentes </strong>
+                 <h3 class="btn"  ng-show="q['Fuente 1'] != ''"> <strong> Fuentes </strong></h3>
                   <ul>
                       <li ng-show="q['Fuente 1'] != ''" ><a target="_blank" ng-href="{{q['Fuente 1']}}"> {{q['Fuente 1']}} </a> </li>
                       <li ng-show="q['Fuente 2'] != ''"><a  target="_blank" ng-href="{{q['Fuente 2']}}"> {{q['Fuente 2']}} </a> </li>
