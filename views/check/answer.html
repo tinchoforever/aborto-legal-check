@@ -8,7 +8,7 @@
             <div class="col-md-8">
               <h2><span ng-show="lastAnswer.result"><img class="icon" src="images/iconos/carita-pan.svg"> Correcto! </span>
               <span ng-hide="lastAnswer.result"><img  class="icon" src="images/iconos/ko.svg">Incorrecto.</span> Este argumento es 
-<span class="btn wow slideInRight" data-wow-delay="2s" href=""><img ng-src="images/iconos/{{currentCheck['Resultado chequeo']}}.svg"/>{{currentCheck['Resultado chequeo']}} </span>
+<span class="btn wow slideInRight" data-wow-delay="2s" href=""><img ng-src="images/iconos/{{currentCheck['Resultado chequeo'].toLowerCase().trim()}}.svg"/>{{currentCheck['Resultado chequeo']}} </span>
               </h2>
                <h5> <strong> {{currentCheck['Expositor/a']}}</strong> dijo que: </h5>
               <p> "{{currentCheck.Dato}}" </p>
@@ -29,7 +29,7 @@
 
             <div class="col-md-2"></div>
             <div class="col-md-8">
-                    <h5> <a href="" ng-click="nextQuestion()"> Tu puntaje es {{currentGame.points}}! </a></h5>
+                    <h5> <strong> Tu puntaje es {{currentGame.points}}! </strong> </h5>
                     <h5> <a class="btn" ng-hide="gameFinish" href="" ng-click="nextQuestion()"> Segui > Vas {{currentGame.questions.length - currentGame.remaing}} de {{currentGame.questions.length}} </a></h5>
                       <h5> <a class="btn" ng-show="gameFinish" href="" ng-click="finishGame()"> Termina el juego.</a></h5>
             </div>
