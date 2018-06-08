@@ -1,121 +1,12 @@
 <div class="container">
-            <div class="row first-row" ng-hide="onQuestion || onAnswer || showResume">
+            <div class="row first-row">
                 
                 <div class="col-md-12" >
                     <h2> Lo que se dijo en el debate por el #AbortoLegal</h2>
-                    <h5 class="btn high"> ¿Verdadero o Falso ?</h5>
-                    <h2>  <a href="" ng-click="startGame()" > Responde </a> </h2>
+                    <h5 class="btn high wow bounceInUp"> ¿Verdadero o Falso ?</h5>
+                    <h2 class="wow bounceInUp"> <a href="" ng-click="startGame()" > Responde </a> </h2>
                 </div>
             </div>
-            <div class=" row first-row"  ng-show="onQuestion">
-              <div class="col-xs-12">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-12">
-                    <h4> "{{currentCheck.Dato}}" </h4>
-                    <h6> <strong> {{currentCheck['Expositor/a']}}  </strong> <small> está {{currentCheck['Posición']}} de la Ley de Aborto Legal y Gratuito</small>  </h6>
-              
-                <div class="row">
-                  
-                   <div class="col-md-12">
-                    <div class="row">
-                       <div class="col-xs-12 col-md-3">
-                          <a class="btn" href="" ng-click="responder('Verdaderos')"><img src="images/iconos/verdadero.svg"/> Verdadero</a>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                          <a class="btn" href="" ng-click="responder('Falso')"><img src="images/iconos/falso.svg"/>Falso</a>
-                        </div>
-                      
-  
-                        <div class="col-xs-12 col-md-3">
-                          <a class="btn"  href="" ng-click="responder('No chequeable')"><img src="images/iconos/no chequeable.svg"/>Inchequeable</a>
-                        </div>
-                        <div class="col-xs-12 col-md-3">
-                          <a class="btn" href="" ng-click="responder('Dudoso')"><img src="images/iconos/dudoso.svg"/>Dudoso</a>
-                        </div>
-
-                       </div>
-                     </div>
-                   </div>
-                </div>
-                      
-            
-            </div>
-          </div>
-        </div>
-        <div class=" row second-row answer"  ng-show="onAnswer">
-              <div class="col-xs-12">
-        
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-              
-              
-              <h2><span ng-show="lastAnswer.result"><img class="icon" src="images/iconos/carita-pan.svg">  Acertaste!</span>
-              <span ng-hide="lastAnswer.result"><img  class="icon" src="images/iconos/ko.svg">Le pifiaste..</span> Este argumento es 
-<span class="btn" href=""><img ng-src="images/iconos/{{currentCheck['Resultado chequeo']}}.svg"/>{{currentCheck['Resultado chequeo']}} </span>
-              </h2>
-              <p> "{{currentCheck.Dato}}" </p>
-              <h6> <strong> {{currentCheck['Expositor/a']}}</strong> <small> está {{currentCheck['Posición']}} de la Ley de Aborto Legal y Gratuito</small>    </h6>
-              <strong ng-show="currentCheck.Comentarios != ''"> ¿Por qué? </strong>
-              <p  ng-show="currentCheck.Comentarios != ''"> {{currentCheck.Comentarios}}</p>
-            <div class="small">
-                  <strong> Fuentes </strong>
-                  <ul>
-                      <li ng-show="currentCheck['Fuente 1'] != ''" ><a target="_blank" ng-href="{{currentCheck['Fuente 1']}}"> {{currentCheck['Fuente 1']}} </a> </li>
-                      <li ng-show="currentCheck['Fuente 2'] != ''"><a  target="_blank" ng-href="{{currentCheck['Fuente 2']}}"> {{currentCheck['Fuente 2']}} </a> </li>
-                      <li ng-show="currentCheck['Fuente 3'] != ''" ><a target="_blank" ng-href="{{currentCheck['Fuente 3']}}"> {{currentCheck['Fuente 3']}} </a> </li>
-                    </ul>
-                    <strong ng-show="currentCheck['Chequeo Chequeado'] != ''"> Este argumento fue revisado por {{currentCheck['Chequeo Chequeado']}} </strong>
-                </div>
-            </div>
-        </div>
-       <div class="row">
-
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-                    <h5> <a href="" ng-click="nextQuestion()"> Tu puntaje es {{currentGame.points}}! </a></h5>
-                    <p> <strong> ¿Sorprendido? Comparti esto en </strong></p>
-                    <h5> <a class="btn" ng-hide="gameFinish" href="" ng-click="nextQuestion()"> Segui > Te quedan vas {{currentGame.remaing}} de {{currentGame.questions.length}} </a></h5>
-                      <h5> <a class="btn" ng-show="gameFinish" href="" ng-click="finishGame()"> Termina el juego.</a></h5>
-            </div>
-            <div class="col-md-2"></div>
-            
-        </div>
-          
-    </div>
-    </div>
-          
-    
-    <div class="second-row " ng-show="showResume">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-            <h1> Tu puntaje fue {{currentGame.points}}! </h1>
-              <h5> <a href="" ng-click="startGame()"> Empeza de nuevo</a></h5>
-              <hr/>
-              <h2> <strong> Resumen de tu Juego </strong> </h2>
-
-            <div ng-repeat="q in currentGame.questions">
-                <hr/>
-                <h2>{{q['Resultado chequeo']}} <small>Respondiente {{q.tuRespuesta}}</small></h2>
-
-              <p> {{q.Dato}}</p>
-              <h6> <strong> {{q['Expositor/a']}}</strong> <small> está {{q['Posición']}} de la Ley de Aborto Legal y Gratuito</small>    </h6>
-              <strong ng-show="q.Comentarios != ''"> ¿Por qué? </strong>
-              <p  ng-show="q.Comentarios != ''"> {{q.Comentarios}}</p>
-            <div class="small">
-                  <strong> Fuentes </strong>
-                  <ul>
-                      <li ng-show="q['Fuente 1'] != ''" ><a target="_blank" ng-href="{{q['Fuente 1']}}"> {{q['Fuente 1']}} </a> </li>
-                      <li ng-show="q['Fuente 2'] != ''"><a  target="_blank" ng-href="{{q['Fuente 2']}}"> {{q['Fuente 2']}} </a> </li>
-                      <li ng-show="q['Fuente 3'] != ''" ><a target="_blank" ng-href="{{q['Fuente 3']}}"> {{q['Fuente 3']}} </a> </li>
-                    </ul>
-                    <strong ng-show="q['Chequeo Chequeado'] != ''"> Este argumento fue revisado por {{q['Chequeo Chequeado']}} </strong>
-                </div>
-            </div>
-        </div>
-    </div>
-   </div>
+</div>
 
 

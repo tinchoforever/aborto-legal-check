@@ -1,69 +1,72 @@
 'use strict';
 
 angular.module('initApp')
-  .controller('mainController', function ($scope) {
+  .controller('mainController', function ($scope, $rootScope, $location) {
     var url = 'data.csv';
 
-    $scope.currentGame = {
+    $rootScope.currentGame = {
       points:0,
       remaing: 5,
     }
-    $scope.lastAnswer = {
+    $rootScope.lastAnswer = {
       result : false,
     }
     
-    $scope.finishGame = function(){
-      $scope.onQuestion = false;
-      $scope.onAnswer = false;
-      $scope.showResume = true;
+    $rootScope.finishGame = function(){
+      $rootScope.onQuestion = false;
+      $rootScope.onAnswer = false;
+      $rootScope.showResume = true;
+      $location.path('fin');
     }
-    $scope.startGame = function(){
+    $rootScope.startGame = function(){
       
-      $scope.onQuestion = true;
-      $scope.onAnswer = false;
-      $scope.showResume = false;
-      $scope.currentGame = {
+      $rootScope.currentGame = {
         points:0,
         remaing: 5,
-        questions: shuffle($scope.readyToCheck).slice(0,5)
+        questions: shuffle($rootScope.readyToCheck).slice(0,5)
       }
-      $scope.currentCheck = $scope.currentGame.questions[$scope.currentGame.remaing-1];
+      $rootScope.currentCheck = $rootScope.currentGame.questions[$rootScope.currentGame.remaing-1];
     
-      $scope.lastAnswer = {
+      $rootScope.lastAnswer = {
         result : false,
       }
+      $location.path('pregunta');
     }
-    $scope.nextQuestion = function(){
-      $scope.onQuestion = true;
-      $scope.onAnswer = false;
-      $scope.showResume = false;
-      $scope.currentCheck = $scope.currentGame.questions[$scope.currentGame.remaing-1];
+    $rootScope.nextQuestion = function(){
+      $rootScope.onQuestion = true;
+      $rootScope.onAnswer = false;
+      $rootScope.showResume = false;
+      $rootScope.currentCheck = $rootScope.currentGame.questions[$rootScope.currentGame.remaing-1];
+      $location.path('pregunta');
     }
 
-    $scope.responder = function(c){
-      var res = $scope.currentCheck['Resultado chequeo'];
+    $rootScope.responder = function(c){
+      var res = $rootScope.currentCheck['Resultado chequeo'];
 
-      $scope.currentCheck.tuRespuesta = c;
-      $scope.lastAnswer.answer = c;
-      $scope.lastAnswer.result = c ===res;
-      if ($scope.lastAnswer.result){
-        $scope.currentGame.points++;
+      $rootScope.currentCheck.tuRespuesta = c;
+      $rootScope.lastAnswer.answer = c;
+      $rootScope.lastAnswer.result = c ===res;
+      if ($rootScope.lastAnswer.result){
+        $rootScope.currentGame.points++;
       }
-      $scope.onQuestion =false;
-      $scope.onAnswer = true;
+      $rootScope.onQuestion =false;
+      $rootScope.onAnswer = true;
      
-      $scope.currentGame.remaing--;
-       if ($scope.currentGame.remaing == 0){
-        $scope.gameFinish = true;
+      $rootScope.currentGame.remaing--;
+       if ($rootScope.currentGame.remaing == 0){
+        $location.path('fin');
+      }else {
+       $location.path('respuesta');
       }
+
     }
   	d3.csv(url, function(data){
-      $scope.$apply(function(){
-        $scope.checks = data;
-        $scope.readyToCheck = [];
+      $rootScope.$apply(function(){
+        $rootScope.checks = data;
+        $rootScope.readyToCheck = [];
         data.map(function(d){
           if (d['Resultado chequeo'] != ''){
-            $scope.readyToCheck.push(d);
+            $rootScope.readyToCheck.push(d);
           }
         });
         

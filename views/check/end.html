@@ -1,0 +1,33 @@
+<div class="container">    
+    <div class="second-row ">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+            <h1> Tu puntaje fue {{currentGame.points}}! </h1>
+              <h5> <a href="" ng-click="startGame()"> Empeza de nuevo</a></h5>
+              <hr/>
+              <h2> <strong> Resumen de tu Juego </strong> </h2>
+
+            <div ng-repeat="q in currentGame.questions">
+                <hr/>
+                <h2>{{q['Resultado chequeo']}} <small>Respondiente {{q.tuRespuesta}}</small></h2>
+
+              <p> {{q.Dato}}</p>
+              <h6> <strong> {{q['Expositor/a']}}</strong> <small> está {{q['Posición']}} de la Ley de Aborto Legal y Gratuito</small>    </h6>
+              <strong ng-show="q.Comentarios != ''"> ¿Por qué? </strong>
+              <p  ng-show="q.Comentarios != ''"> {{q.Comentarios}}</p>
+            <div class="small">
+                  <strong> Fuentes </strong>
+                  <ul>
+                      <li ng-show="q['Fuente 1'] != ''" ><a target="_blank" ng-href="{{q['Fuente 1']}}"> {{q['Fuente 1']}} </a> </li>
+                      <li ng-show="q['Fuente 2'] != ''"><a  target="_blank" ng-href="{{q['Fuente 2']}}"> {{q['Fuente 2']}} </a> </li>
+                      <li ng-show="q['Fuente 3'] != ''" ><a target="_blank" ng-href="{{q['Fuente 3']}}"> {{q['Fuente 3']}} </a> </li>
+                    </ul>
+                    <strong ng-show="q['Chequeo Chequeado'] != ''"> Este argumento fue revisado por {{q['Chequeo Chequeado']}} </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+

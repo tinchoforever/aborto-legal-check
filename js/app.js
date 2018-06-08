@@ -7,12 +7,26 @@ angular.module('initApp',['ngRoute', 'ngAnimate'])
         templateUrl: 'views/check/main.html',
         controller: 'mainController'
       })
+       .when('/pregunta', {
+        templateUrl: 'views/check/question.html',
+        controller: 'questionController'
+      })
+        .when('/respuesta', {
+        templateUrl: 'views/check/answer.html',
+        controller: 'questionController'
+      })
+      .when('/fin', {
+        templateUrl: 'views/check/end.html',
+        controller: 'endController'
+      })
       .when('/stats', {
         templateUrl: 'views/check/stats.html',
         controller: 'statsController'
       })
 });
-
+ 
+new WOW().init();
+              
 /**
  * Returns a random number between min (inclusive) and max (exclusive)
  */
