@@ -59,6 +59,9 @@ a{
 .has-margin-top {
     margin-top: 3em;
 }
+.btn.no-click{
+    cursor: initial;
+}
 .btn p{
     margin: 0;
     /* display: table-cell; */
