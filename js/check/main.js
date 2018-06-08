@@ -53,8 +53,8 @@ angular.module('initApp')
       $rootScope.onAnswer = true;
      
       $rootScope.currentGame.remaing--;
-       if ($rootScope.currentGame.remaing == 0){
-          $$rootScope.gameFinish = true;
+       if ($rootScope.currentGame.remaing = 0){
+          $rootScope.gameFinish = true;
       }
       $location.path('respuesta');
 
