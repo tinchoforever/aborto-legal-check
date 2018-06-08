@@ -62,7 +62,14 @@ a{
 .btn.no-click{
     cursor: initial;
 }
+
+.btn.no-click:hover{
+    color:white;
+}
 a.btn.no-click:hover{
+ color:white;
+}
+strong.btn.no-click:hover{
     color:white;
 }
 .btn p{
