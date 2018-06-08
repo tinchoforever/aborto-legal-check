@@ -6,16 +6,17 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-              <h2><span ng-show="lastAnswer.result"><img class="icon" src="images/iconos/carita-pan.svg">  Acertaste!</span>
-              <span ng-hide="lastAnswer.result"><img  class="icon" src="images/iconos/ko.svg">Le pifiaste..</span> Este argumento es 
+              <h2><span ng-show="lastAnswer.result"><img class="icon" src="images/iconos/carita-pan.svg"> Correcto! </span>
+              <span ng-hide="lastAnswer.result"><img  class="icon" src="images/iconos/ko.svg">Incorrecto.</span> Este argumento es 
 <span class="btn wow slideInRight" data-wow-delay="2s" href=""><img ng-src="images/iconos/{{currentCheck['Resultado chequeo']}}.svg"/>{{currentCheck['Resultado chequeo']}} </span>
               </h2>
+               <h6> <strong> {{currentCheck['Expositor/a']}}</strong> <small> dijo que:</small>    </h6>
               <p> "{{currentCheck.Dato}}" </p>
-              <h6> <strong> {{currentCheck['Expositor/a']}}</strong> <small> está {{currentCheck['Posición']}} de la Ley de Aborto Legal y Gratuito</small>    </h6>
-              <strong ng-show="currentCheck.Comentarios != ''"> ¿Por qué? </strong>
+             
+              <strong class="btn" ng-show="currentCheck.Comentarios != ''"> ¿Por qué? </strong>
               <p  ng-show="currentCheck.Comentarios != ''"> {{currentCheck.Comentarios}}</p>
             <div class="small">
-                  <strong> Fuentes </strong>
+                  <strong class="btn"  ng-show="currentCheck['Fuente 1'] != ''"> Fuentes </strong>
                   <ul>
                       <li ng-show="currentCheck['Fuente 1'] != ''" ><a target="_blank" ng-href="{{currentCheck['Fuente 1']}}"> {{currentCheck['Fuente 1']}} </a> </li>
                       <li ng-show="currentCheck['Fuente 2'] != ''"><a  target="_blank" ng-href="{{currentCheck['Fuente 2']}}"> {{currentCheck['Fuente 2']}} </a> </li>
@@ -30,7 +31,6 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                     <h5> <a href="" ng-click="nextQuestion()"> Tu puntaje es {{currentGame.points}}! </a></h5>
-                    <p> <strong> ¿Sorprendido? Comparti esto en </strong></p>
                     <h5> <a class="btn" ng-hide="gameFinish" href="" ng-click="nextQuestion()"> Segui > Te quedan vas {{currentGame.remaing}} de {{currentGame.questions.length}} </a></h5>
                       <h5> <a class="btn" ng-show="gameFinish" href="" ng-click="finishGame()"> Termina el juego.</a></h5>
             </div>
