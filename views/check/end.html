@@ -3,16 +3,16 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8">
-            <h1> <img class="icon" src="images/iconos/carita-pan.svg"> Tu puntaje fue {{currentGame.points}}! </h1>
+            <h2> <img class="icon" src="images/iconos/carita-pan.svg"> Tu puntaje fue {{currentGame.points}}! </h2>
               <h5> <a href="" class="btn" ng-click="startGame()"><img class="icon" src="images/iconos/fuerza.svg">  Empezá de nuevo</a></h5>
               <hr/>
-               <div class="row">
+               
               <!-- Large modal -->
-                <a href=""  data-toggle="modal" data-target=".bs-example-modal-lg"> ¿Quienes trabajamos en esto?</a>    
-                </div>
+               <h4> <a href=""  data-toggle="modal" data-target=".bs-example-modal-lg"> ¿Quienes trabajamos en esto?</a>    </h4>
+                
                    <hr/>
               <h2 class="btn no-click"> <strong> Resumen de tu Juego </strong> </h2>
-   <hr/>f
+   <hr/>
             <div ng-repeat="q in currentGame.questions">
              
               <h6> <strong> {{q['Expositor/a']}}</strong> dijo que:</h6>
