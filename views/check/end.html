@@ -18,7 +18,7 @@
               <h6> <strong> {{q['Expositor/a']}}</strong> dijo que:</h6>
               <p> "{{q.Dato}}"</p>
               
-              <h2 class="btn"> <img ng-src="images/iconos/{{q['Resultado chequeo'].toLowerCase().trim()}}.svg"/>{{q['Resultado chequeo']}} </h2> 
+              <h2 class="btn"> <img ng-src="images/iconos/{{q['Resultado chequeo'].toLowerCase().replace(' ','')}}.svg"/>{{q['Resultado chequeo']}} </h2> 
                 <h2> <small>Respondiente <strong> {{q.tuRespuesta}} </strong></small></h2>
 
               <h3> <strong class="btn no-click" ng-show="q.Comentarios != ''"> ¿Por qué? </strong></h3>

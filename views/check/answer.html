@@ -8,7 +8,7 @@
             <div class="col-md-8">
               <h2><span ng-show="lastAnswer.result"><img class="icon" src="images/iconos/carita-pan.svg"> Correcto! </span>
               <span ng-hide="lastAnswer.result"><img  class="icon" src="images/iconos/ko.svg">Incorrecto.</span> Este argumento es 
-<span class="btn wow slideInRight" data-wow-delay="2s" href=""><img ng-src="images/iconos/{{currentCheck['Resultado chequeo'].toLowerCase().trim()}}.svg"/>{{currentCheck['Resultado chequeo']}} </span>
+<span class="btn wow slideInRight" data-wow-delay="2s" href=""><img ng-src="images/iconos/{{currentCheck['Resultado chequeo'].toLowerCase().replace(' ','')}}.svg"/>{{currentCheck['Resultado chequeo']}} </span>
               </h2>
                <h5> <strong> {{currentCheck['Expositor/a']}}</strong> dijo que: </h5>
               <p> "{{currentCheck.Dato}}" </p>

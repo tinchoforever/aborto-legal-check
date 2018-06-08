@@ -62,6 +62,9 @@ a{
 .btn.no-click{
     cursor: initial;
 }
+a.btn.no-click:hover{
+    color:white;
+}
 .btn p{
     margin: 0;
     /* display: table-cell; */
