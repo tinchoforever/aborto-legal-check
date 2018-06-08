@@ -6,11 +6,27 @@
             <h2> <img class="icon" src="images/iconos/carita-pan.svg"> Tu puntaje fue {{currentGame.points}}! </h2>
               <h5> <a href="" class="btn" ng-click="startGame()">Empezá de nuevo</a></h5>
               <hr/>
-               
+                <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="upper center">Envialo por</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 share-menu animated dur-2 bounceInUp">
+                    <a ng-click="FBCopyMessage()" class="waves-effect waves-light btn share" href=""><i class="fab fa-facebook-messenger fa-2" aria-hidden="true"></i></a>
+                    <a ng-href="https://web.whatsapp.com/send?text={{translation}}" target="_blank" class="waves-effect waves-light btn share show-desktop" href=""><i class="fab fa-whatsapp fa-2" aria-hidden="true"></i></a>
+                    <a ng-href="whatsapp://send?text={{translation}}" target="_blank" class="waves-effect waves-light btn share c" ng-click="shareWhatsapp"><i class="fab fa-whatsapp fa-2" aria-hidden="true"></i></a>
+                    <a ng-href="https://twitter.com/messages/compose?text={{translation}}" target="_blank" class="waves-effect waves-light btn share" href="" ng-click="shareTwitter"><i class="fab fa-twitter fa-2" aria-hidden="true"></i></a>
+                    <a ng-click="copyMessage()" target="_blank" class="waves-effect waves-light btn share" href=""><i class="fa fa-clone fa-2" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+          <hr/>
               <!-- Large modal -->
                <h4> <a href=""  data-toggle="modal" data-target=".bs-example-modal-lg"> CRÉDITOS</a>    </h4>
-                
-                   <hr/>
+                <hr/>
+                 
               <h2 class="btn no-click"> <strong> Resumen de tu Juego </strong> </h2>
    
             <div ng-repeat="q in currentGame.questions">
