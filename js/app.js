@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('initApp',['ngRoute', 'ngAnimate'])
+.config(['$compileProvider', function($compileProvider) {
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|whatsapp|file|tel):/);
+  }])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
