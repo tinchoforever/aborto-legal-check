@@ -56,11 +56,23 @@ a{
     padding-top: 2em;
     align-items: baseline;
 }
+.share-menu{
+
+    text-align: center;
+}
+.btn.share {
+    border-radius: 27px;
+    width: 42px;
+    text-align: center;
+}
 .has-margin-top {
     margin-top: 3em;
 }
 .btn.no-click{
     cursor: initial;
+}
+.center{
+    text-align: center;
 }
 
 .btn.no-click:hover{
