@@ -108,7 +108,7 @@ ul li a {
    white-space: nowrap;
 }
 h4{
-    font-size: 1.125em;
+    font-size: 1.2em;
 }
 .modal-dialog p{
     color: #683064;
@@ -341,6 +341,9 @@ footer p {
 }
 
 @media (min-width: 768px) {
+    h4{
+        font-size: 1.6em;
+    }
     .container {
         max-width: 100%;
         padding-left: 2em;
